@@ -1,0 +1,1 @@
+../../.agents/skills-marketplace/everything-claude-code/agents/doc-updater.md
