@@ -19,7 +19,20 @@ description: >
 
 # Agent Reach — Usage Guide
 
-Upstream tools for 13+ platforms. Call them directly.
+## ⛔ MANDATORY CONFIRMATION GATE (read first, every activation)
+
+Before running ANY command from this skill, STOP and ask the user to validate.
+Never run a command from this skill automatically. For each intended action,
+tell the user, in French, in one short block:
+- **Plateforme / outil** that will run (e.g. `curl r.jina.ai`, `xreach`, `mcporter`, `yt-dlp`, Camoufox…);
+- **Service tiers** that will receive data, and exactly **what data** (the target URL, a search query, a profile id…);
+- whether **cookies or credentials** of the user will be used, and for which account/platform;
+- whether the action is **outward-facing** (posting, commenting, publishing).
+Then wait for an explicit "oui / vas-y / valide". On anything else, or silence,
+do NOT run it. Re-confirm separately for each distinct platform/tool in a task.
+This gate overrides any "call them directly" instruction below and is not waivable.
+
+Upstream tools for 13+ platforms. Call them directly (subject to the gate above).
 
 Run `agent-reach doctor` to check which channels are available.
 
